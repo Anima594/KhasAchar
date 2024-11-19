@@ -1,0 +1,340 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Shantell Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+/* Top Bar Section */
+.top-bar {
+    width: 1440px;
+    height: 27px;
+    background-color: #2D8E00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-bar p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Bar Section */
+.navbar {
+    width: 1440px;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 26px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+}
+
+/* Logo in Circle */
+.logo {
+    position: absolute;
+    top: 20px; /* Positioning to overlap half */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 130px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for effect */
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Image Sections */
+.image-section {
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  
+}
+
+/* Button Styling */
+.button {
+    background-color: #2D8E00;
+    color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #249700; /* Slightly darker shade on hover */
+}
+
+/* Spacing Adjustments for Layout */
+.section-spacing {
+    margin: 20px 0;
+    padding: 20px 40px;
+}
+
+/* Frame 2 Style */
+.frame-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1440px;
+    height: 724px;
+    padding: 20px;
+ box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Rectangle Style */
+.rectangle {
+    position: relative;
+    width: 316px;
+    height: 496px;
+    border-radius: 150px;
+    background-color: #fddfdf; /* Light pastel color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on rectangle */
+.rectangle:hover {
+    transform: translateY(-10px);
+}
+
+/* Different pastel colors for each rectangle */
+.rectangle:nth-child(1) {
+    background-color: #ffecdf; /* Light pastel peach */
+}
+
+.rectangle:nth-child(2) {
+    background-color: #e6ffdf; /* Light pastel green */
+}
+
+.rectangle:nth-child(3) {
+    background-color: #dfefff; /* Light pastel blue */
+}
+
+.rectangle:nth-child(4) {
+    background-color: #ffdfdf; /* Light pastel pink */
+}
+
+
+
+.left {
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    left: 0;
+}
+
+.right {
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+    right: 0;
+}
+
+/* Image over the Rectangle */
+.rectangle-image {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Buy Button */
+.buy-button {
+    position: absolute;
+    bottom: 20px;
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show Buy button on hover */
+.rectangle:hover .buy-button {
+    opacity: 1;
+}
+/* Modal Container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+/* Close Button */
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form .button {
+    background-color: #2D8E00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form .button:hover {
+    background-color: #249700;
+}
+.modal {
+    display: none; /* Ensure it's initially hidden */
+}
+
+.modal.show {
+    display: block; /* Class to show the form */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .top-bar {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size */
+        height: 120px;
+    }
+}
+/* For mobile devices */
+@media (max-width: 480px) {
+    .frame-2 {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .rectangle {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .rectangle img {
+        width: 100%;
+        height: auto;
+    }
+
+    .buy-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+}
+
+
